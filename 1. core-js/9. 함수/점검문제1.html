@@ -21,6 +21,23 @@
 // 빈 배열을 만들고 판별이 되면 푸시 푸시 완료되면 한 배열에 출력하기
 //약수의 출력만 배열 안에서 개수는 리턴 그 개수는 리턴되고 함수를 출력한곳에서 하면됩니다.
 
+function calcDivisor(targetNumber){
+ var divisors = [];
+ for(var i=1; i<targetNumber; i++) {
+  if(targetNumber % i === 0) {
+    divisors.push(i);
+    
+  }
+ }
+ console.log(`${targetNumber}의 약수: ${divisors}`);
+ // count 변수로 숫자를 직접 세도 되지만, 약수 배열이 있으니까 요소의 개수가 약수의 개수일 것이다.
+  return divisors.length;  
+}
+
+
+var divCount = calcDivisor(72);
+console.log(`약수의 개수: ${divCount}개`);
+
 
 
 
