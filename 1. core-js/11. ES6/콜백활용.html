@@ -76,17 +76,33 @@
       }
       return filteredArray;
     }
-   // 취미가 3개 이상인 사람만 필터링 하기.
-   const result = filter(user => user.hobbies.length >= 3);
-    
-   // 주소가 서울이면서 직업이 게이머인 사람만 필터링 하기.
-   const result2 = filter(user => user.address === '서울' && user.job === '게이머');
+    // 취미가 3개 이상인 사람만 필터링 하기.
+    const result = filter(user => user.hobbies.length >= 3);
 
-   console.log(result1);
-   console.log(result2);
+    // 주소가 서울이면서 직업이 게이머인 사람만 필터링 하기.
+    const result2 = filter(user => user.address === '서울' && user.job === '게이머');
+
+    console.log(result1);
+    console.log(result2);
 
 
     // 회원 정보중에 회원 이름만 전부 모아서 배열에 담아줘.
+    // 매핑
+    function map(callback) {
+      const mappedArray = [];
+
+      for (let user of userList) {
+        mappedArray.push(callback(user));
+      }
+
+      return mappedArray;
+    }
+
+    const nameList = map(user => user.userName);
+    console.log(nameList);
+
+    const addressList = map(user => user.address);
+    console.log(addressList);
 
 
 
