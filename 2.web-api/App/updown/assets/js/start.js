@@ -1,7 +1,7 @@
 
 
 import gameData from "./gameData.js";
-import { caseUp, caseDown, correctAnswer } from "./checkAnswer.js";
+import { caseUp, caseDown, correctAnswer } from "./checkAnswer.js";   // export 받을 때 
 
 
 // 게임이 시작되면 해야할 일을 정의하는 함수.
