@@ -25,7 +25,7 @@ function makeNewTodoNode(newTodo) {
   const $divMod = document.createElement('div');
   const $divRem = document.createElement('div');
   
-  //label 태그 작업
+  // label 태그 작업
   $label.classList.add('checkbox');
   const $check = document.createElement('input');
   $check.setAttribute('type', 'checkbox');
@@ -61,7 +61,7 @@ function makeNewTodoNode(newTodo) {
 
  // [$label, $divMod, $divRem].forEach($ele => $li.appendChild($ele));
 
- // ul 태그를 지목해서 $li를 자시 노드로 추가
+ // ul 태그를 지목해서 $li를 자식 노드로 추가
  document.querySelector('.todo-list').appendChild($li);
 }
 
